@@ -1,23 +1,23 @@
-name: Scheduled Content Generation
+name: Content Farm
+
 on:
   schedule:
-    # Run every day at 9:00 AM UTC
-    - cron: '0 9 * * *'
-  workflow_dispatch:  # Allow manual trigger
-    inputs:
-      topic:
-        description: 'Topic for the article'
-        required: false
-        default: 'latest AI and technology news'
+    # Run at 10:00 AM UTC+8 (2:00 AM UTC) every day
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
-  generate:
+  run-content-farm:
     runs-on: ubuntu-latest
     steps:
       - name: Run Content Farm Agent
         uses: vm0-ai/run-action@v1
         with:
           agent: content-farm
-          prompt: "Write an article about ${{ github.event.inputs.topic || 'latest AI and technology news' }}"
-          artifact-name: content-farm-daily
+          prompt: "写一篇英文文章，介绍下近期 AI 的动向，对每篇文章做个简单的综述，方便读者在早上喝咖啡的时候快速浏览新闻"
+          artifact-name: content-farm-output
           vm0-token: ${{ secrets.VM0_TOKEN }}
+          secrets: |
+            CLAUDE_CODE_OAUTH_TOKEN=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+            FAL_KEY=${{ secrets.FAL_KEY }}
+            DEVTO_API_KEY=${{ secrets.DEVTO_API_KEY }}
