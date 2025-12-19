@@ -32,7 +32,7 @@ Create article outline with:
 
 ## Phase 5: Write Article
 
-Write 1000-1500 words following your outline.
+Write 1000-1500 words following your outline to article.md.
 
 **Style:** Conversational, short paragraphs, bullet points, casual transitions. Avoid corporate language.
 
@@ -42,14 +42,8 @@ Write 1000-1500 words following your outline.
 
 Use the fal-image skill to create a featured image. Save the returned fal.ai image URL for publishing.
 
-## Phase 7: Prepare Output
+## Phase 7: Publish to Dev.to
 
-Save to `output/` folder:
-- article.md - The complete article
-- metadata.json - Title, description, keywords, sources
-
-## Phase 8: Publish to Dev.to
-
-Use the devto-publish skill with appropriate tags (up to 4). Always use `--published true`.
+Publish to devto with appropriate tags (up to 4). Always use `--published true`.
 
 Report the Dev.to URL back to the user.
