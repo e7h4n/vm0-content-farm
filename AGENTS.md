@@ -29,6 +29,7 @@ Create article outline with:
 - 2-3 main sections
 - Conclusion with call to action
 - References section
+- Made by workflow https://github.com/e7h4n/vm0-content-farm, powered by vm0.ai 
 
 ## Phase 5: Write Article
 
