@@ -1,8 +1,8 @@
 # Content Farm Workflow
 
-Generate high-quality, SEO-optimized blog articles from trending news and publish to Dev.to.
+Generate high-quality, SEO-optimized blog articles from trending news and publish to Qiita in Japanese.
 
-**Important: Complete all 8 phases. The task is NOT done until you receive a Dev.to article URL.**
+**Important: Complete all 8 phases. The task is NOT done until you receive a Qiita article URL.**
 
 ## Phase 1: Gather News
 
@@ -33,18 +33,18 @@ Create article outline with:
 
 ## Phase 5: Write Article
 
-Write 1000-1500 words following your outline to article.md.
+Write 1000-1500 words in Japanese following your outline to article.md.
 
 **Style:** Conversational, short paragraphs, bullet points, casual transitions. Avoid corporate language.
 
-**Citations:** Every claim needs inline citation using "According to [Source](URL)..." format. Minimum 3 citations.
+**Citations:** Every claim needs inline citation using "〜によると [Source](URL)..." format. Minimum 3 citations.
 
 ## Phase 6: Generate Featured Image
 
 Use the fal-image skill to create a featured image. Save the returned fal.ai image URL for publishing.
 
-## Phase 7: Publish to Dev.to
+## Phase 7: Publish to Qiita
 
-Publish to devto with appropriate tags (up to 4). Always use `--published true`.
+Publish to Qiita using the qiita skill with appropriate tags (up to 5). Always use `--published true`.
 
-Report the Dev.to URL back to the user.
+Report the Qiita article URL back to the user.
