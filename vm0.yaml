@@ -9,8 +9,12 @@ agents:
     beta_system_skills:
       - https://github.com/vm0-ai/vm0-skills/tree/main/rss-fetch
       - https://github.com/vm0-ai/vm0-skills/tree/main/fal-image
-      - https://github.com/vm0-ai/vm0-skills/tree/main/devto-publish
+      - https://github.com/vm0-ai/vm0-skills/tree/main/qiita
+      - https://github.com/vm0-ai/vm0-skills/tree/main/cloudinary
     environment:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       FAL_KEY: ${{ secrets.FAL_KEY }}
-      DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+      QIITA_ACCESS_TOKEN: ${{ secrets.QIITA_ACCESS_TOKEN }}
