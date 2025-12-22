@@ -9,6 +9,8 @@ agents:
     beta_system_skills:
       - https://github.com/vm0-ai/vm0-skills/tree/main/fal.ai
       - https://github.com/vm0-ai/vm0-skills/tree/main/hackernews
+      - https://github.com/vm0-ai/vm0-skills/tree/main/devto-publish
     environment:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       FAL_KEY: ${{ secrets.FAL_KEY }}
+      DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}

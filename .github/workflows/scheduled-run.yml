@@ -21,3 +21,17 @@ jobs:
             CLAUDE_CODE_OAUTH_TOKEN=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
             FAL_KEY=${{ secrets.FAL_KEY }}
             DEVTO_API_KEY=${{ secrets.DEVTO_API_KEY }}
+  run-dora-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Dora News Agent
+        uses: vm0-ai/run-action@v1
+        with:
+          agent: dora-news
+          prompt: "do the job"
+          artifact-name: dora-news-output
+          vm0-token: ${{ secrets.VM0_TOKEN }}
+          secrets: |
+            CLAUDE_CODE_OAUTH_TOKEN=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+            FAL_KEY=${{ secrets.FAL_KEY }}
+            DEVTO_API_KEY=${{ secrets.DEVTO_API_KEY }}

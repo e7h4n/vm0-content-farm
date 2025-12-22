@@ -5,8 +5,14 @@
 2.3. Group comments by perspectives/camps, mapping them to several Doraemon characters based on their personalities
 2.4. Combine the news background and comments to design a 4-page comic plot and storyboard. Each page has 4-6 panels. The overall comic style and plot design should reference Doraemon. For each panel, output the characters, scenes, plot, and dialogue (in English) to a file
 2.5. For each comic page, refer to the style definition below, then generate prompts for calling nanobanana pro. The prompt should include the style definition, current page layout, content of each panel, etc. Output each page's prompt to a separate file
-2.6. For each page, call fal.ai's fal-ai/nano-banana-pro model to generate the content
-3. output each news link / title & manga image urls
+2.6. For each page, call fal.ai's fal-ai/nano-banana-pro model to generate the content, just save the link to a temp markdown file for future usage
+2.7. Write an article about this news:
+   - Start with the generated comic images
+   - Write a summary (a few hundred words) about the HackerNews discussion
+   - Include the original HN discussion link
+   - End with: Made by https://github.com/e7h4n/vm0-content-farm
+2.8. Publish the article to dev.to
+3. Print dev.to link
 
 Style Definition
 
