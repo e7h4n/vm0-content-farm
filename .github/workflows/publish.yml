@@ -4,7 +4,7 @@ on:
     branches: [main]
 
 jobs:
-  publish:
+  publish-ai-news:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,6 +13,26 @@ jobs:
         id: publish
         uses: vm0-ai/compose-action@v1
         with:
+          working-directory: ai-news
+          vm0-token: ${{ secrets.VM0_TOKEN }}
+
+      - name: Print Results
+        run: |
+          echo "Agent: ${{ steps.publish.outputs.name }}"
+          echo "Compose ID: ${{ steps.publish.outputs.compose-id }}"
+          echo "Version: ${{ steps.publish.outputs.version-id }}"
+          echo "Action: ${{ steps.publish.outputs.action }}"
+
+  publish-dora-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish VM0 Agent
+        id: publish
+        uses: vm0-ai/compose-action@v1
+        with:
+          working-directory: dora-news
           vm0-token: ${{ secrets.VM0_TOKEN }}
 
       - name: Print Results
