@@ -2,11 +2,9 @@ version: "1.0"
 
 agents:
   content-farm:
-    description: "AI-powered blog content generation agent"
     provider: claude-code
-    image: vm0-claude-code
-    beta_system_prompt: AGENTS.md
-    beta_system_skills:
+    instructions: AGENTS.md
+    skills:
       - https://github.com/vm0-ai/vm0-skills/tree/main/rss-fetch
       - https://github.com/vm0-ai/vm0-skills/tree/main/fal-image
       - https://github.com/vm0-ai/vm0-skills/tree/main/devto-publish
